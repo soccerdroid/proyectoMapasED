@@ -1,0 +1,2 @@
+FIEC0101|Estructuras de datos|5
+CCPG1001|Fundamentos de Programacion|4
