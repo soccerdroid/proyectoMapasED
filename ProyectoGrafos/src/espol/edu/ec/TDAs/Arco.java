@@ -7,16 +7,17 @@ package espol.edu.ec.TDAs;
 
 /**
  *
- * @author eduardo
+ * @author pavilion
  */
 public class Arco {
     private Vertice origen,destino;
-    private int peso;
+    private final int peso=1;
+    private String pelicula;
 
-    public Arco(Vertice origen, Vertice destino, int peso) {
+    public Arco(Vertice origen, Vertice destino, String pelicula) {
         this.origen=origen;
         this.destino = destino;
-        this.peso = peso;
+        this.pelicula=pelicula;
     }
 
     public Vertice getOrigen() {
@@ -44,11 +45,16 @@ public class Arco {
     {
         destino = v;
     }
-    
-    public int getPeso()
-    {
-        return peso;
+
+    public String getPelicula() {
+        return pelicula;
     }
+
+    public void setPelicula(String pelicula) {
+        this.pelicula = pelicula;
+    }
+    
+    
     public String toString(){
         return this.origen+"<- "+this.peso+" ->"+this.destino;
     }
@@ -56,6 +62,6 @@ public class Arco {
     public boolean equals(Object o)
     {
         Arco a = (Arco)o;
-        return this.destino.getContenido().equals(a.destino.getContenido()) && this.origen.getContenido().equals(a.origen.getContenido()) && this.peso==a.peso;
+        return this.destino.getId().equals(a.destino.getId()) && this.origen.getId().equals(a.origen.getId()) && this.peso==a.peso;
     }
 }

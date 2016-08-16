@@ -67,7 +67,7 @@ public class Main {
         for(Vertice x: prueba2)
         System.out.println(x);
 */
-       LinkedList<Integer> l=new LinkedList <>();
+       /*LinkedList<Integer> l=new LinkedList <>();
        l.add(2);
        l.add(3);
        Collections.sort(l);
@@ -98,7 +98,41 @@ public class Main {
        grafo.agregarArco(vf,ve,5);
        grafo.agregarArco(ve,vd,12);
        grafo.dijkstra(va);
-       grafo.imprimirDijkstra();
+       grafo.imprimirDijkstra();*/
+       GrafoND grafo= new GrafoND();
+       Vertice v1 = new Vertice(1);
+       Vertice v2 = new Vertice(2);
+       Vertice v3 = new Vertice(3);
+       Vertice v4 = new Vertice(4);
+       Vertice v5 = new Vertice(5);
+       Vertice v6 = new Vertice(6);
+       Vertice v7 = new Vertice(7);
+       grafo.agregarVertice(v1);
+       grafo.agregarVertice(v2);
+       grafo.agregarVertice(v3);
+       grafo.agregarVertice(v4);
+       grafo.agregarVertice(v5);
+       grafo.agregarVertice(v6);
+       grafo.agregarVertice(v7);
+       grafo.agregarArco(v1,v2,1);
+       grafo.agregarArco(v1,v4,4);
+       grafo.agregarArco(v2,v3,2);
+       grafo.agregarArco(v2,v5,4);
+       grafo.agregarArco(v2,v4,6);
+       grafo.agregarArco(v3,v5,5);
+       grafo.agregarArco(v3,v6,6);
+       grafo.agregarArco(v4,v5,3);
+       grafo.agregarArco(v4,v7,4);
+       grafo.agregarArco(v5,v6,8);
+       grafo.agregarArco(v5,v7,7);
+       grafo.agregarArco(v6,v7,3);
+       int contador=0;
+        System.out.println(grafo);
+       GrafoND kruskal= grafo.kruskal();
+       GrafoND prim=grafo.prim();
+       System.out.println(kruskal);
+        System.out.println(prim);
+        
 
     }
     

@@ -34,7 +34,7 @@ public class Proyecto2 {
             for (File a : archivos) {
                 HashMap<String, Estudiante> mapaEstudiantes = cargarCalificaciones(a.getAbsolutePath());
                 System.out.println(a.getName().substring(0, a.getName().indexOf(".")));
-                mapaCursos.put(a.getName(), mapaEstudiantes);
+                mapaCursos.put(a.getName().substring(0, a.getName().indexOf(".")), mapaEstudiantes);
             }
             System.out.println(mapaCursos);
             

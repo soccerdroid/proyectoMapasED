@@ -62,7 +62,7 @@ public class GrafoLA {
                 Vertice v1 = i.next();
                 if (origen.equals(v1)) {
                     LinkedList<Arco> Larcos = v1.getListaArcos();
-                    Arco a = new Arco(destino, peso);
+                    Arco a = new Arco(origen,destino, peso);
                     if (!Larcos.contains(a)) {
                         Larcos.add(a);
                         return true;
